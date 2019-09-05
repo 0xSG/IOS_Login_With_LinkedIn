@@ -30,7 +30,15 @@ class ProfileViewController: UIViewController {
         let start = str.index(str.startIndex, offsetBy: 9)
         let end = str.index(str.endIndex, offsetBy: -1)
         let range = start..<end
+        let res = str[range]
         
+        return String(res)
+    }
+    func formateEmail(str: String) -> String {
+        
+        let start = str.index(str.startIndex, offsetBy: 6)
+        let end = str.index(str.endIndex, offsetBy: -1)
+        let range = start..<end
         let res = str[range]
         
         return String(res)
@@ -48,21 +56,31 @@ class ProfileViewController: UIViewController {
         profile_image.layer.borderWidth = 5
         
         //assigining data
-        print(formateString(str: userNameTxt))
+        
         
         user_name.text = formateString(str: userNameTxt)
         
         noConnections.text = formateString(str: numConnTxt)
         curLabel.text = formateString(str: currentTxt)
-        emailLabel.text = formateString(str: emailTxt)
         
         
-        profile_image.downloaded(from: profileURLTxt)
+        
+            
+        
+        
+        
+        emailTxt = formateString(str: emailTxt)
+        emailLabel.text = formateEmail(str: emailTxt)
+        print(emailLabel.text)
+        
+        profile_image.downloaded(from: formateString(str: profileURLTxt))
 
         
    
 
     }
+    
+    
     
     
     /*
