@@ -27,21 +27,31 @@ class ProfileViewController: UIViewController {
     
     func formateString(str: String) -> String {
         
+        if emailTxt.endIndex.encodedOffset > 9{
         let start = str.index(str.startIndex, offsetBy: 9)
         let end = str.index(str.endIndex, offsetBy: -1)
         let range = start..<end
         let res = str[range]
+            return String(res)
+        }
+        else{
+            return ""
+        }
         
-        return String(res)
     }
     func formateEmail(str: String) -> String {
         
+        
+        if emailTxt.endIndex.encodedOffset > 6{
         let start = str.index(str.startIndex, offsetBy: 6)
         let end = str.index(str.endIndex, offsetBy: -1)
         let range = start..<end
         let res = str[range]
+            return String(res)
+        }else{
+            return ""
+        }
         
-        return String(res)
     }
     
     override func viewDidLoad() {
@@ -70,8 +80,9 @@ class ProfileViewController: UIViewController {
         
         
         emailTxt = formateString(str: emailTxt)
+        
         emailLabel.text = formateEmail(str: emailTxt)
-        print(emailLabel.text)
+        
         
         profile_image.downloaded(from: formateString(str: profileURLTxt))
 

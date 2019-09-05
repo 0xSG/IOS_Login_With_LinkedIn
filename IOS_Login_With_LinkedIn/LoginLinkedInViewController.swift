@@ -19,6 +19,8 @@ class LoginLinkedInViewController: UIViewController, WKNavigationDelegate {
     var currentTxt = String()
     var emailTxt = String()
     
+    var loadedfull: Bool = false
+    
 
     
   
@@ -41,8 +43,9 @@ class LoginLinkedInViewController: UIViewController, WKNavigationDelegate {
     func webView(_ Webview: WKWebView,didFinish navigation: WKNavigation!) {
         
         //open other profile page
-        
+        if loadedfull {
         performSegue(withIdentifier: "profile_segue", sender: self)
+        }
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -52,7 +55,7 @@ class LoginLinkedInViewController: UIViewController, WKNavigationDelegate {
                 print("Login success")
                 
                 //fetch all data
-                
+                loadedfull = true
                 
                 Webview.evaluateJavaScript("document.getElementsByClassName('member-name extra-extra-large-semibold profile-photo-upload-exp')[0].innerText") { (username, error) -> Void in
                     
