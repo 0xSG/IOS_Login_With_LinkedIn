@@ -16,6 +16,7 @@
 		3413536723200FF300E810BE /* IOS_Login_With_LinkedInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3413536623200FF300E810BE /* IOS_Login_With_LinkedInUITests.swift */; };
 		347C4A7B2320D4D400C55366 /* LoginLinkedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C4A7A2320D4D400C55366 /* LoginLinkedInViewController.swift */; };
 		347C4A7D2320F38300C55366 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C4A7C2320F38300C55366 /* ProfileViewController.swift */; };
+		347C4A81232178BC00C55366 /* imageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C4A80232178BC00C55366 /* imageViewExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3413536823200FF300E810BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347C4A7A2320D4D400C55366 /* LoginLinkedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLinkedInViewController.swift; sourceTree = "<group>"; };
 		347C4A7C2320F38300C55366 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		347C4A80232178BC00C55366 /* imageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				3413534623200FF200E810BE /* AppDelegate.swift */,
 				3413534A23200FF200E810BE /* Main.storyboard */,
+				347C4A80232178BC00C55366 /* imageViewExt.swift */,
 				3413534D23200FF300E810BE /* Assets.xcassets */,
 				3413534823200FF200E810BE /* ViewController.swift */,
 				347C4A7C2320F38300C55366 /* ProfileViewController.swift */,
@@ -265,6 +268,7 @@
 				3413534923200FF200E810BE /* ViewController.swift in Sources */,
 				3413534723200FF200E810BE /* AppDelegate.swift in Sources */,
 				347C4A7D2320F38300C55366 /* ProfileViewController.swift in Sources */,
+				347C4A81232178BC00C55366 /* imageViewExt.swift in Sources */,
 				347C4A7B2320D4D400C55366 /* LoginLinkedInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

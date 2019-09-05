@@ -59,13 +59,6 @@
                                 <color key="textColor" red="0.55760231599999999" green="0.55760231599999999" blue="0.55760231599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zR-1L-Q8o">
-                                <rect key="frame" x="139" y="426" width="59" height="30"/>
-                                <state key="normal" title="Teseting"/>
-                                <connections>
-                                    <segue destination="hO9-ZZ-6bB" kind="presentation" modalTransitionStyle="partialCurl" id="jgt-Tr-L4G"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -74,13 +67,11 @@
                             <constraint firstItem="edC-y0-wSH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="213" id="2d7-Dd-qNz"/>
                             <constraint firstItem="l56-of-xSc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7kA-jq-qnV"/>
                             <constraint firstItem="exu-lt-7JI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="9Ic-QL-nkZ"/>
-                            <constraint firstItem="6zR-1L-Q8o" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="426" id="CC5-yo-IwH"/>
                             <constraint firstItem="lRl-jg-jy9" firstAttribute="top" secondItem="exu-lt-7JI" secondAttribute="bottom" constant="47" id="K1r-XJ-9xF"/>
                             <constraint firstItem="l56-of-xSc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LQt-rX-Z6U"/>
                             <constraint firstItem="rdh-Po-zVD" firstAttribute="centerX" secondItem="lRl-jg-jy9" secondAttribute="centerX" id="LTX-jK-i48"/>
                             <constraint firstAttribute="bottom" secondItem="l56-of-xSc" secondAttribute="bottom" id="Oj1-fa-T3m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lRl-jg-jy9" secondAttribute="trailing" constant="20" id="QPr-cD-POZ"/>
-                            <constraint firstItem="6zR-1L-Q8o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="QlE-ee-uvY"/>
                             <constraint firstItem="lRl-jg-jy9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Tsz-O5-W86"/>
                             <constraint firstAttribute="bottom" secondItem="rdh-Po-zVD" secondAttribute="bottom" constant="11" id="byG-7Z-Irp"/>
                             <constraint firstItem="lRl-jg-jy9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cT5-73-vMg"/>
@@ -158,6 +149,13 @@
                                     <color key="titleColor" red="0.20976236149999999" green="0.54493041080000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47A-f2-bvh">
+                                <rect key="frame" x="20" y="613" width="50" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="0.46852185419999998" green="0.58654605329999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -185,6 +183,7 @@
                     </view>
                     <connections>
                         <outlet property="eduLabel" destination="JTV-9S-rFe" id="CSJ-5X-4uw"/>
+                        <outlet property="emailLable" destination="47A-f2-bvh" id="zaN-JG-EPY"/>
                         <outlet property="noConnections" destination="FeQ-v5-TJ6" id="B7M-aV-huD"/>
                         <outlet property="profile_image" destination="b2p-RQ-QTw" id="wmT-m9-gcq"/>
                         <outlet property="user_name" destination="pOf-PR-HCE" id="vgl-Or-TaR"/>
@@ -264,7 +263,6 @@
         <image name="signout" width="210" height="72"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bQR-xM-PXD"/>
         <segue reference="Dbi-oI-Wpx"/>
     </inferredMetricsTieBreakers>
 </document>

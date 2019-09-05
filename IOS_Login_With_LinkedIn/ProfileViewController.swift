@@ -9,17 +9,19 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+
     
     var userNameTxt = String()
     var profileURLTxt = String()
     var numConnTxt = String()
-    var eduText = String()
-
+    var currentTxt = String()
+    var emailTxt = String()
     
     @IBOutlet weak var user_name: UILabel!
     @IBOutlet weak var profile_image: UIImageView!
     @IBOutlet weak var noConnections: UILabel!
-    @IBOutlet weak var eduLabel: UILabel!
+    @IBOutlet weak var curLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +35,18 @@ class ProfileViewController: UIViewController {
         profile_image.layer.borderWidth = 5
         
         //assigining data
+        
         user_name.text = userNameTxt
+        
         noConnections.text = numConnTxt
-        eduLabel.text = eduText
+        curLabel.text = currentTxt
+        emailLabel.text = emailTxt
         
         
-        
+        profile_image.downloaded(from: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
+        //fetch image
+     
+
     }
     
     
@@ -52,4 +60,8 @@ class ProfileViewController: UIViewController {
      }
      */
     
+    
+
+    
 }
+

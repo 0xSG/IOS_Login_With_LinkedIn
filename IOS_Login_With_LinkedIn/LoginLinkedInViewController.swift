@@ -16,7 +16,8 @@ class LoginLinkedInViewController: UIViewController, WKNavigationDelegate {
     var userNameTxt = String()
     var profileURLTxt = String()
     var numConnTxt = String()
-    var eduText = String()
+    var currentTxt = String()
+    var emailTxt = String()
     
 
     
@@ -46,20 +47,47 @@ class LoginLinkedInViewController: UIViewController, WKNavigationDelegate {
                 
                 Webview.evaluateJavaScript("document.getElementsByClassName('member-name extra-extra-large-semibold profile-photo-upload-exp')[0].innerText") { (username, error) -> Void in
                     
-                    self.userNameTxt = username as! String
+                    self.userNameTxt  = String(describing: username)
+                    print(self.userNameTxt)
                 }
-                Webview.evaluateJavaScript("document.getElementsByClassName('member-description')[0].innerText") { (data, error) -> Void in
+                
+                Webview.evaluateJavaScript("document.getElementsByClassName('member-description')[0].getElementsByClassName('medium-light')[0].innerText") { (currentTxtData, error) -> Void in
                     
-                    
-                    var newData = (data as! String).replacingOccurrences(of: self.userNameTxt, with: "", options: NSString.CompareOptions.literal, range: nil)
-                    print(newData)
-                    
-                    
+                    self.currentTxt  = String(describing: currentTxtData)
+                    print(self.currentTxt)
                 }
+
+                
+                Webview.evaluateJavaScript("document.getElementsByClassName('contact-info email')[0].innerText") { (emaildata, error) -> Void in
+                    
+                    self.emailTxt  = String(describing: emaildata)
+                    print(self.emailTxt)
+                }
+                
+                
+                Webview.evaluateJavaScript("document.getElementsByClassName('member-description')[0].getElementsByClassName('medium-light')[1].getElementsByClassName('member-connection-info dot-separator')[0].innerText") { (numConnTxtData, error) -> Void in
+                    
+                    self.numConnTxt  = String(describing: numConnTxtData)
+                    print(self.numConnTxt)
+                }
+                
+                Webview.evaluateJavaScript("document.getElementsByClassName('member-photo-container profile-photo-upload-exp')[0].children[0].getAttribute('src')") { (profileURLTxtData, error) -> Void in
+                    
+                    self.profileURLTxt  = String(describing: profileURLTxtData)
+                    print(self.profileURLTxt)
+                }
+                
+                
                 
                 
                 //open other profile page
-                performSegue(withIdentifier: "profile_segue", sender: self)
+                    Webview.setWebViewClient(new WebViewClient() {
+                        
+                        public void onPageFinished(WebView view, String url) {
+                            performSegue(withIdentifier: "profile_segue", sender: self)
+                        }
+                    });
+                //performSegue(withIdentifier: "profile_segue", sender: self)
                 
                 
             }
@@ -73,6 +101,11 @@ class LoginLinkedInViewController: UIViewController, WKNavigationDelegate {
             profileVC.userNameTxt = "Surya"
             profileVC.numConnTxt = "234"
 
+            profileVC.userNameTxt = userNameTxt
+            profileVC.profileURLTxt = profileURLTxt
+            profileVC.numConnTxt = numConnTxt
+            profileVC.currentTxt = currentTxt
+            profileVC.emailTxt = emailTxt
         }
     }
     
