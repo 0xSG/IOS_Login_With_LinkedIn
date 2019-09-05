@@ -25,6 +25,17 @@ class ProfileViewController: UIViewController {
     
     
     
+    func formateString(str: String) -> String {
+        
+        let start = str.index(str.startIndex, offsetBy: 9)
+        let end = str.index(str.endIndex, offsetBy: -1)
+        let range = start..<end
+        
+        let res = str[range]
+        
+        return String(res)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,17 +48,19 @@ class ProfileViewController: UIViewController {
         profile_image.layer.borderWidth = 5
         
         //assigining data
+        print(formateString(str: userNameTxt))
         
-        user_name.text = userNameTxt
+        user_name.text = formateString(str: userNameTxt)
         
-        noConnections.text = numConnTxt
-        curLabel.text = currentTxt
-        emailLabel.text = emailTxt
+        noConnections.text = formateString(str: numConnTxt)
+        curLabel.text = formateString(str: currentTxt)
+        emailLabel.text = formateString(str: emailTxt)
         
         
-        profile_image.downloaded(from: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg")
-        //fetch image
-     
+        profile_image.downloaded(from: profileURLTxt)
+
+        
+   
 
     }
     
