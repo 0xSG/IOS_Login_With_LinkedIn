@@ -14,6 +14,9 @@
 		3413535123200FF300E810BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3413534F23200FF300E810BE /* LaunchScreen.storyboard */; };
 		3413535C23200FF300E810BE /* IOS_Login_With_LinkedInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3413535B23200FF300E810BE /* IOS_Login_With_LinkedInTests.swift */; };
 		3413536723200FF300E810BE /* IOS_Login_With_LinkedInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3413536623200FF300E810BE /* IOS_Login_With_LinkedInUITests.swift */; };
+		347C4A592320C22F00C55366 /* LoginPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347C4A572320C22F00C55366 /* LoginPopUp.storyboard */; };
+		347C4A7B2320D4D400C55366 /* LoginLinkedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C4A7A2320D4D400C55366 /* LoginLinkedInViewController.swift */; };
+		347C4A7D2320F38300C55366 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C4A7C2320F38300C55366 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		3413536223200FF300E810BE /* IOS_Login_With_LinkedInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOS_Login_With_LinkedInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3413536623200FF300E810BE /* IOS_Login_With_LinkedInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_Login_With_LinkedInUITests.swift; sourceTree = "<group>"; };
 		3413536823200FF300E810BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		347C4A582320C22F00C55366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = IOS_Login_With_LinkedIn/Base.lproj/LoginPopUp.storyboard; sourceTree = "<group>"; };
+		347C4A7A2320D4D400C55366 /* LoginLinkedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLinkedInViewController.swift; sourceTree = "<group>"; };
+		347C4A7C2320F38300C55366 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 				3413534823200FF200E810BE /* ViewController.swift */,
 				3413534A23200FF200E810BE /* Main.storyboard */,
 				3413534D23200FF300E810BE /* Assets.xcassets */,
+				347C4A572320C22F00C55366 /* LoginPopUp.storyboard */,
+				347C4A7C2320F38300C55366 /* ProfileViewController.swift */,
+				347C4A7A2320D4D400C55366 /* LoginLinkedInViewController.swift */,
 				3413534F23200FF300E810BE /* LaunchScreen.storyboard */,
 				3413535223200FF300E810BE /* Info.plist */,
 			);
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3413535123200FF300E810BE /* LaunchScreen.storyboard in Resources */,
+				347C4A592320C22F00C55366 /* LoginPopUp.storyboard in Resources */,
 				3413534E23200FF300E810BE /* Assets.xcassets in Resources */,
 				3413534C23200FF200E810BE /* Main.storyboard in Resources */,
 			);
@@ -258,6 +268,8 @@
 			files = (
 				3413534923200FF200E810BE /* ViewController.swift in Sources */,
 				3413534723200FF200E810BE /* AppDelegate.swift in Sources */,
+				347C4A7D2320F38300C55366 /* ProfileViewController.swift in Sources */,
+				347C4A7B2320D4D400C55366 /* LoginLinkedInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +319,14 @@
 				3413535023200FF300E810BE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		347C4A572320C22F00C55366 /* LoginPopUp.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				347C4A582320C22F00C55366 /* Base */,
+			);
+			name = LoginPopUp.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
