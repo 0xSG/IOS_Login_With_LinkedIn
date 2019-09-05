@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exu-lt-7JI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exu-lt-7JI">
                                 <rect key="frame" x="131" y="581" width="132" height="30"/>
                                 <state key="normal" title="Login with LinkedIn"/>
                                 <connections>
-                                    <action selector="LinkedinLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pYD-fQ-kwB"/>
                                     <segue destination="ctc-4b-BLD" kind="presentation" id="4cC-Qt-G4T"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="exu-lt-7JI" secondAttribute="bottom" constant="251" id="092-Uz-xPC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="exu-lt-7JI" secondAttribute="bottom" constant="251" id="7vR-D7-JJA"/>
+                            <constraint firstItem="exu-lt-7JI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="NlJ-hw-iKu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,7 +41,7 @@
         <!--Profile View Controller-->
         <scene sceneID="5ec-ad-Rk3">
             <objects>
-                <viewController id="hO9-ZZ-6bB" customClass="ProfileViewController" customModule="IOS_Login_With_LinkedIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileviewID" id="hO9-ZZ-6bB" customClass="ProfileViewController" customModule="IOS_Login_With_LinkedIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3KY-Ue-TLT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

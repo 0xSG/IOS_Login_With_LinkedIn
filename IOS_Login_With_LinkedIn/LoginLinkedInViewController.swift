@@ -30,7 +30,11 @@ class LoginLinkedInViewController: UIViewController, WKNavigationDelegate {
             let mainCurrentURL = (self.Webview.url!).absoluteString
             if mainCurrentURL.contains("linkedin.com/feed") {
                 print("Login success")
-                
+                //code to navigate to other page
+
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let profileViewController = storyBoard.instantiateViewController(withIdentifier: "profileviewID") as! ProfileViewController
+                self.present(profileViewController, animated: true, completion: nil)
                 
                 
             }
