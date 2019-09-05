@@ -23,6 +23,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var curLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

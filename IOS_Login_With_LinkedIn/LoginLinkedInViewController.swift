@@ -28,13 +28,22 @@ class LoginLinkedInViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         
         let url = URL(string: "https://www.linkedin.com/mwlite/me")
+        
+        Webview.navigationDelegate = self
         Webview.load(URLRequest(url: url!))
         
         self.Webview.addObserver(self, forKeyPath: "URL", options: .new, context: nil)
-
+        
+     
     }
     
-    
+    //onload complete
+    func webView(_ Webview: WKWebView,didFinish navigation: WKNavigation!) {
+        
+        //open other profile page
+        
+        performSegue(withIdentifier: "profile_segue", sender: self)
+    }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == #keyPath(WKWebView.url) {
@@ -80,14 +89,7 @@ class LoginLinkedInViewController: UIViewController, WKNavigationDelegate {
                 
                 
                 
-                //open other profile page
-                    Webview.setWebViewClient(new WebViewClient() {
-                        
-                        public void onPageFinished(WebView view, String url) {
-                            performSegue(withIdentifier: "profile_segue", sender: self)
-                        }
-                    });
-                //performSegue(withIdentifier: "profile_segue", sender: self)
+                
                 
                 
             }

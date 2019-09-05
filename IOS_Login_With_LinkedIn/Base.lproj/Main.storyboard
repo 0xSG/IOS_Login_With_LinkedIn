@@ -182,8 +182,8 @@
                         <viewLayoutGuide key="safeArea" id="NrY-pn-DFM"/>
                     </view>
                     <connections>
-                        <outlet property="eduLabel" destination="JTV-9S-rFe" id="CSJ-5X-4uw"/>
-                        <outlet property="emailLable" destination="47A-f2-bvh" id="zaN-JG-EPY"/>
+                        <outlet property="curLabel" destination="JTV-9S-rFe" id="snq-YP-mhz"/>
+                        <outlet property="emailLabels" destination="47A-f2-bvh" id="Pj1-um-fIc"/>
                         <outlet property="noConnections" destination="FeQ-v5-TJ6" id="B7M-aV-huD"/>
                         <outlet property="profile_image" destination="b2p-RQ-QTw" id="wmT-m9-gcq"/>
                         <outlet property="user_name" destination="pOf-PR-HCE" id="vgl-Or-TaR"/>
