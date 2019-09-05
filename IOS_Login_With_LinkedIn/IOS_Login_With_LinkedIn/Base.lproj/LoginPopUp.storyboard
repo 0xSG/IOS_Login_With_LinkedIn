@@ -41,7 +41,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="YEA-QA-gtt" kind="presentation" id="e8q-LI-eVs"/>
+                                    <segue destination="YEA-QA-gtt" kind="presentation" modalTransitionStyle="crossDissolve" id="e8q-LI-eVs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVB-IA-k2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-417"/>
+            <point key="canvasLocation" x="-2457" y="-585"/>
         </scene>
         <!--UIViewController-BYZ-38-t0r-->
         <scene sceneID="Vdx-fV-0Iv">

@@ -10,16 +10,35 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    var userNameTxt = String()
+    var profileURLTxt = String()
+    var numConnTxt = String()
+    var eduText = String()
+
+    
+    @IBOutlet weak var user_name: UILabel!
     @IBOutlet weak var profile_image: UIImageView!
+    @IBOutlet weak var noConnections: UILabel!
+    @IBOutlet weak var eduLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         
+        
+        //circular pic
         profile_image.layer.cornerRadius = profile_image.frame.width/2
         profile_image.clipsToBounds = true
         profile_image.layer.borderColor = UIColor.white.cgColor
         profile_image.layer.borderWidth = 5
+        
+        //assigining data
+        user_name.text = userNameTxt
+        noConnections.text = numConnTxt
+        eduLabel.text = eduText
+        
+        
+        
     }
     
     
